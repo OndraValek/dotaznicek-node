@@ -5,20 +5,27 @@ body {
     padding: 0;
 }
 
-
 h1 {
     color: white;
-    background-color: blue;
-    font-size: 30pt;
-    padding: 10px;
+    background-color: #3498db;
+    font-size: 36px;
+    padding: 20px;
     margin: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 20px auto;
 }
@@ -26,64 +33,64 @@ h1 {
 label {
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 input[type=text],
 input[type=number],
 select,
 input[type=range] {
-    width: 80%;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
 input[type=range] {
-    -webkit-appearance: none;
-    width: 80%;
-    height: 8px;
-    border-radius: 5px;
+    height: 10px;
     background: #ddd;
     outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-appearance: none;
+    border-radius: 5px;
 }
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background: #4CAF50;
+    background: #3498db;
     cursor: pointer;
 }
 
 input[type=range]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background: #4CAF50;
+    background: #3498db;
     cursor: pointer;
 }
 
 input[type=submit] {
-    font-size: 16px;
-    background-color: #4CAF50;
+    font-size: 18px;
+    background-color: #2ecc71;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #27ae60;
 }
 
 #importanceValue {
@@ -94,23 +101,23 @@ input[type=submit]:hover {
     padding: 10px;
     border-radius: 20px;
 }
-/* Úprava vzhledu tabulky */
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 th,
 td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
 }
 
@@ -122,11 +129,37 @@ tr:hover {
     background-color: #ddd;
 }
 
-/* Přidáváme trochu paddingu na stránky pro lepší vzhled */
 .container {
     max-width: 960px;
     margin: auto;
     background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+/* Posunutí tlačítka "Odeslat odpovědi" o řádek níže */
+.submit-button {
+    clear: both;
+    text-align: center;
 }

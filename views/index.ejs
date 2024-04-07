@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Webová anketa</title>
-  </head>
-  <body>
-    <h1>Anketa o sportu a pohybu</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotazníček na náhodné otázky</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <%- include('blocks/header'); -%>
+    <h2>Dotazníček</h2>
     <form action="/submit" method="post" class="form-container">
-      <div>
-        <label for="hours"
-          >Průměrný počet hodin, které týdně věnujete sportu nebo jiné pohybové
-          aktivitě:</label
-        >
-        <input type="number" step="0.1" id="hours" name="hours" required />
-      </div>
-
-      <div>
-        <label>Vyberte si sport pro hodinu tělocviku:</label>
-        <select id="sport" name="sport">
-          <option value="atletika">Atletika</option>
-          <option value="gymnastika">Gymnastika</option>
-          <option value="plavání">Plavání</option>
-          <option value="cyklistika">Cyklistika</option>
-          <option value="bruslení">Bruslení</option>
-          <option value="lyžování">Lyžování</option>
-          <option value="volejbal">Volejbal</option>
-          <option value="florbal">Florbal</option>
-          <option value="golf">Golf</option>
-        </select>
-      </div>
-
-      <div>
-        <label for="importance"
-          >Jakou roli hraje sport ve vašem životě? (škála 0 až 5):
-        </label>
-        <input
-          type="range"
-          id="importance"
-          name="importance"
-          min="0"
-          max="5"
-          step="1"
-        />
-        <span id="importanceValue"></span>
-      </div>
-
-      <div>
-        <label for="roleModel">Napište jméno svého sportovního vzoru:</label>
-        <input type="text" id="roleModel" name="roleModel" />
-      </div>
-
-      <button type="submit">Odeslat odpovědi</button>
+        <div>
+            <label for="roleModel">Jaké je vaše jméno/přezdívka:</label>
+            <input type="text" id="roleModel" name="roleModel" required>
+        </div>
+        
+        <div>
+            <label for="hours">Kolik hodin spíte průměrně denně?:</label>
+            <input type="number" step="0.1" id="hours" name="hours" required min="0" max="24">
+        </div>
+        
+        <div>
+            <label>Který typ dovolené preferujete?</label>
+            <select id="dovolena" name="dovolena">
+                <option value="Plážová dovolená">Plážová dovolená</option>
+                <option value="Horská túra">Horská túra</option>
+                <option value="Kulturní výlety">Kulturní výlety</option>
+                <option value="Adrenalínové sporty">Adrenalínové sporty</option>
+                <option value="Relaxační wellness pobyt">Relaxační wellness pobyt</option>
+                <option value="Pobyt v přírodě a kempování">Pobyt v přírodě a kempování</option>
+                <option value="Cestování po historických památkách">Cestování po historických památkách</option>
+                <option value="Aktivní dovolená s vodními sporty">Aktivní dovolená s vodními sporty</option>
+            </select>
+        </div>
+        
+        <div class="clearfix">
+            <label for="importance">Jak hodnotíte svoji schopnost efektivního řízení času? (1 - Velmi špatně, 5 - Velmi dobře)</label>
+            <input type="range" id="importance" name="importance" min="1" max="5" step="1">
+            <span id="importanceValue"></span>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit" class="submit-button">Odeslat odpovědi</button>
+        </div>
     </form>
+    <%- include('blocks/footer'); -%>
     <script>
-      const slider = document.getElementById('importance')
-      const output = document.getElementById('importanceValue')
-      output.innerHTML = slider.value // Zobrazit výchozí hodnotu
-
-      slider.oninput = function () {
-        output.innerHTML = this.value
-      }
+        const slider = document.getElementById('importance');
+        const output = document.getElementById('importanceValue');
+        output.innerHTML = slider.value; // Zobrazit výchozí hodnotu
+      
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
     </script>
-  </body>
+</body>
 </html>

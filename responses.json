@@ -1,12 +1,42 @@
 [
-    {
-      "id": 1710794019428,
-      "timestamp": "2024-03-18T20:33:39.428Z",
-      "answers": {
-        "hours": "6.5",
-        "sport": "lyžování",
-        "importance": "4",
-        "roleModel": "Ester Ledecká"
-      }
+  {
+    "id": 1712409139594,
+    "timestamp": "2024-04-06T13:12:19.594Z",
+    "answers": {
+      "roleModel": "Ondřej Válek",
+      "hours": "7",
+      "dovolena": "Horská túra",
+      "importance": "5"
     }
-  ]
+  },
+  {
+    "id": 1712409183149,
+    "timestamp": "2024-04-06T13:13:03.149Z",
+    "answers": {
+      "roleModel": "Onďák",
+      "hours": "8",
+      "dovolena": "Aktivní dovolená s vodními sporty",
+      "importance": "4"
+    }
+  },
+  {
+    "id": 1712409220923,
+    "timestamp": "2024-04-06T13:13:40.923Z",
+    "answers": {
+      "roleModel": "Valeron",
+      "hours": "9",
+      "dovolena": "Pobyt v přírodě a kempování",
+      "importance": "3"
+    }
+  },
+  {
+    "id": 1712409434780,
+    "timestamp": "2024-04-06T13:17:14.780Z",
+    "answers": {
+      "roleModel": "Pokus",
+      "hours": "10",
+      "dovolena": "Plážová dovolená",
+      "importance": "2"
+    }
+  }
+]
